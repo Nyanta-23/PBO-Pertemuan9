@@ -36,17 +36,9 @@ class barangBarang{
 }
 
 
-class bukuGambar extends barangBarang{
+class barang extends barangBarang{
     
-    public bukuGambar(String kodeBarang, String namaBarang, int HPP, int hargaJual, int stok, int jumlahJual){
-        super(kodeBarang, namaBarang, HPP, hargaJual, stok, jumlahJual);
-    }
-
-}
-
-class pensil extends barangBarang{
-    
-    public pensil(String kodeBarang, String namaBarang, int HPP, int hargaJual, int stok, int jumlahJual){
+    public barang(String kodeBarang, String namaBarang, int HPP, int hargaJual, int stok, int jumlahJual){
         super(kodeBarang, namaBarang, HPP, hargaJual, stok, jumlahJual);
     }
 
@@ -59,13 +51,13 @@ public class LatihanModul8 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        barangBarang[] barang = new barangBarang[2];
+        barangBarang[] brng = new barangBarang[2];
         
-        barang[0] = new bukuGambar("B001", "BUKU GAMBAR", 2500, 3000, 5, 2);
-        barang[1] = new pensil("p002", "PENSIL 2B", 1500, 1750, 10, 1);
+        brng[0] = new barang("B001", "BUKU GAMBAR", 2500, 3000, 5, 2);
+        brng[1] = new barang("p002", "PENSIL 2B", 1500, 1750, 10, 1);
         
-        for(int i = 0; i < barang.length; i++){
-            System.out.println(barang[i].tampilinHasilPenjualanBarang());
+        for(int i = 0; i < brng.length; i++){
+            System.out.println(brng[i].tampilinHasilPenjualanBarang());
             System.out.println("---------------------------------------------------");
         }
         
